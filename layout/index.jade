@@ -1,0 +1,59 @@
+doctype
+html
+
+    include head
+
+    //body
+    body.main-page.pattern-bg
+
+        //content-wrap
+        div.content-wrap.va-table.grad-overlay
+            div.va-cell
+
+                h1.page-title   Ты сегодня покормил кота?
+
+
+                //packs-wrap
+                div.packs-wrap
+
+                    each pack in packs
+                        div.pack-block
+
+                            article.pack.js-select-pack
+                                div.pack__wrap.cut-corner-block.cut-corner-block--left-top
+                                    div.cut-corner-block__corner
+
+                                    div.pack__content
+                                        p.pack-description= pack.description
+                                        h2.pack-title= pack.title
+                                            span.pack-title__add= pack.title_add
+                                        ul.pack-features
+                                            each feature in pack.features
+                                                li.pack-features__item !{feature}
+
+
+                                div.pack__picture(style="background-image: url('img/cat.png')")
+
+                                div.pack__info.pack-mass
+                                    span.pack-mass__value= pack.mass
+                                    |кг
+
+
+
+                            p.pack-block__subscription.pack-block__subscription--default= pack.block_messages.default
+                                a.common-link.dotted-link.js-select-pack(href="#") купи.
+
+                            p.pack-block__subscription.pack-block__subscription--selected= pack.block_messages.selected
+
+                            p.pack-block__subscription.pack-block__subscription--disabled= pack.block_messages.disabled
+
+
+
+                //end pack-wrap
+
+        include footer
+
+
+
+
+

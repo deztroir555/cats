@@ -1,0 +1,161 @@
+/* common mixins */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.border-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+}
+.text-input,
+.button-input {
+  border: 0;
+  background: none;
+  outline: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+}
+.bg-cover {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.inline-block-wrap {
+  word-spacing: -0.31em;
+}
+.inline-block-wrap > * {
+  word-spacing: normal;
+}
+.va-table {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.va-table .va-cell {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* end common mixins */
+/* base project styles */
+@font-face {
+  font-family: 'exo2.0-thin';
+  src: url('../fonts/exo2.0-thin.eot');
+  src: url('../fonts/exo2.0-thin.eot?#iefix') format('embedded-opentype'), url('../fonts/exo2.0-thin.woff2') format('woff2'), url('../fonts/exo2.0-thin.woff') format('woff'), url('../fonts/exo2.0-thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Trebuchet MS', 'Arial', sans-serif, serif;
+  font-size: 14px;
+  line-height: normal;
+  color: #000000;
+}
+.wrap {
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.pattern-bg {
+  background: url('../img/pattern.jpg') repeat;
+}
+.grad-overlay {
+  position: relative;
+}
+.grad-overlay:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+.grad-overlay > * {
+  position: relative;
+}
+.page-title {
+  margin-top: 0.5555555555555556em;
+  margin-bottom: 0.5555555555555556em;
+  font-family: 'exo2.0-thin', 'Arial', sans-serif, serif;
+  font-size: 2.5714285714285716em;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.dotted-link {
+  display: inline-block;
+  border-bottom: 1px dashed;
+}
+.dotted-link:hover {
+  border-color: transparent;
+}
+.common-link {
+  color: #1698d9;
+  border-color: #1698d9;
+}
+@media only screen and (max-width: 1023px) {
+  
+}
+@media only screen and (max-width: 767px) {
+  
+}
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+/* end base project styles */
+/* page styles */
+@media only screen and (max-width: 1023px) {
+  
+}
+@media only screen and (max-width: 767px) {
+  
+}
+@media only screen and (max-width: 480px) {
+  
+}
+/* end page styles */
